@@ -46,9 +46,13 @@
     <section id="hero" class="jumbotron">
       <div class="container">
         <h1 class="hero-title load-hidden">
-          Hi, my name is <span class="text-color-main">Your Name</span>
+          Hi, my name is <span class="text-color-main">Rydell Donato</span>,
           <br />
-          I'm the Unknown Developer.
+          Your Sacramento-Based Tech Wizard🧙🏽‍♂️
+          <br />
+          I'm a Full Stack Software Engineer dedicated to powering local
+          businesses with digital success. Let's Elevate Your Business's Online
+          Presence.🚀
         </h1>
         <p class="hero-cta load-hidden">
           <a rel="noreferrer" class="cta-btn cta-btn--hero" href="#about"
@@ -60,46 +64,85 @@
     <!-- /END Hero Section -->
 
     <!-- **** About Section **** -->
-    <section id="about">
+    <section id="about" class="bg-light py-5">
       <div class="container">
-        <h2 class="section-title load-hidden">About me</h2>
-        <div class="row about-wrapper">
-          <div class="col-md-6 col-sm-12">
-            <div class="about-wrapper__image load-hidden">
-              <img
-                alt="Profile Image"
-                class="img-fluid rounded shadow-lg"
-                height="auto"
-                width="300px"
-                src="assets/profile.jpg"
-                alt="Profile Image"
-              />
+        <div class="row">
+          <div class="col-md-6">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-text">
+              <p class="intro">
+                Welcome to my portfolio! I'm Rydell Donato, a website creator
+                with a unique blend of experiences. 
+                <p class="experience">Head Chef - 18 Grams Coffee and Tea</p>
+                <p class="experience">
+                  Shopify Web Developer - ECODE [Ecommerce company]
+                </p>
+                <p class="experience">Software Engineering Bootcamp Graduate</p>
+                <p class="experience">Personal Trainer/Fitness Coach</p>
+                <p class="experience">Track and Field Athlete</p>
+                <p>
+                  My diverse background
+                uniquely equips me, making me the ideal choice for small
+                businesses looking to enhance their online presence. Let's
+                collaborate to elevate your online presence!
+                </p>
+              </p>
             </div>
+            <a
+              rel="noreferrer"
+              target="_blank"
+              class="cta-btn cta-btn--hero"
+              href="assets/rydell-donato-resume-2023.pdf"
+            >
+              View Resume
+            </a>
+            <a
+              class="cta-btn cta-btn--hero"
+              href="#projects"
+            >
+              View Projects
+            </a>
           </div>
-          <div class="col-md-6 col-sm-12">
-            <div class="about-wrapper__info load-hidden">
-              <p class="about-wrapper__info-text">
-                This is where you can describe about yourself. The more you
-                describe about yourself, the more chances you have!
-              </p>
-              <p class="about-wrapper__info-text">
-                Extra Information about you! like hobbies and your goals.
-              </p>
-              <span class="d-flex mt-3">
-                <a
-                  rel="noreferrer"
-                  target="_blank"
-                  class="cta-btn cta-btn--resume"
-                  href="assets/resume.pdf"
-                >
-                  View Resume
-                </a>
-              </span>
-            </div>
+          <div class="col-md-6">
+            <img
+            alt="Profile Image"
+            class="img-fluid rounded-circle shadow-lg"
+            src="assets/profile-pic.jpg"
+            alt="Profile Image"
+            />
           </div>
         </div>
       </div>
     </section>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        const intro = $(".intro");
+        const experiences = $(".experience");
+        let index = 0;
+
+        function showExperience() {
+          if (index < experiences.length) {
+            experiences.eq(index).addClass("animate");
+            index++;
+            setTimeout(showExperience, 8000);
+          }
+        }
+
+        // Start the animation when the user scrolls to the section
+        const aboutSection = $("#about");
+        $(window).on("scroll", function () {
+          const scrollPosition = $(window).scrollTop();
+          const sectionPosition = aboutSection.offset().top;
+
+          if (scrollPosition > sectionPosition - 300) {
+            intro.addClass("animate");
+            showExperience();
+          }
+        });
+      });
+    </script>
+
     <!-- /END About Section -->
 
     <!-- **** Projects Section **** -->
@@ -112,30 +155,22 @@
           <div class="row">
             <div class="col-lg-4 col-sm-12">
               <div class="project-wrapper__text load-hidden">
-                <h3 class="project-wrapper__text-title">Project Title 0</h3>
+                <h3 class="project-wrapper__text-title">ecodeofficial.com</h3>
                 <div>
                   <p class="mb-4">
-                    Describe the project being very specific, you can use the Twitter standard: no more than 280 characters: 
-                    complement the information: the skills learned or reinforced in its realization and how you faced it, 
-                    prove to be proactive in the search for solutions.
+                    ECODE is the first-ever QR "Code" clothing brand. ECODE, formerly known as "QR Clothes", was named the Winner of the Fashion Scholarship Fund 2021, Troylabs Demo Day Top 50 Startups, and featured in an issue of WWD Magazine.
                   </p>
+                  <img width="100%" src="assets/ecode-awards.png"/>
                 </div>
                 <a
                   rel="noreferrer"
                   target="_blank"
                   class="cta-btn cta-btn--hero"
-                  href="#!"
+                  href="https://ecodeofficial.com/"
                 >
                   See Live
                 </a>
-                <a
-                  rel="noreferrer"
-                  target="_blank"
-                  class="cta-btn text-color-main"
-                  href="#!"
-                >
-                  Source Code
-                </a>
+                <div style="display: flex; flex-direction: column; margin-top: 80px;" class="col-md-6"><h3>More Projects!</h3><a href="#project2"><img width="60" src="assets/down-arrow.png"/></a></div>
               </div>
             </div>
             <div class="col-lg-8 col-sm-12">
@@ -151,7 +186,7 @@
                     <img
                       alt="Project Image"
                       class="img-fluid"
-                      src="assets/project.jpg"
+                      src="assets/ecodeofficial.com.png"
                     />
                   </div>
                 </a>
@@ -163,13 +198,16 @@
           <!-- Notice: each .row is a project -->
           <div class="row">
             <div class="col-lg-4 col-sm-12">
-              <div class="project-wrapper__text load-hidden">
+              <div id="project2" class="project-wrapper__text load-hidden">
                 <h3 class="project-wrapper__text-title">Project Title 1</h3>
                 <div>
                   <p class="mb-4">
-                    Demonstrate in this description the skills of a programmer: such as having commitment, 
-                    having perseverance and accepting alternative solutions. Remember that being a portfolio you are not selling the project, 
-                    you are selling yourself, it reflects the resources used: Frameworks, libraries, platforms, etc.
+                    Demonstrate in this description the skills of a programmer:
+                    such as having commitment, having perseverance and accepting
+                    alternative solutions. Remember that being a portfolio you
+                    are not selling the project, you are selling yourself, it
+                    reflects the resources used: Frameworks, libraries,
+                    platforms, etc.
                   </p>
                 </div>
                 <a
@@ -219,8 +257,11 @@
                 <h3 class="project-wrapper__text-title">Project Title 2</h3>
                 <div>
                   <p class="mb-4">
-                    If the project was collaborative, reflect it in this description, that will demonstrate communication and/or leadership skills. 
-                    Additionally, if you made use of the mastery of a second language, it will reflect on you professionalism.
+                    If the project was collaborative, reflect it in this
+                    description, that will demonstrate communication and/or
+                    leadership skills. Additionally, if you made use of the
+                    mastery of a second language, it will reflect on you
+                    professionalism.
                   </p>
                 </div>
                 <a
@@ -326,7 +367,7 @@
             >Fork</a
           >
           <a
-            rel="noreferrer" 
+            rel="noreferrer"
             class="github-button"
             href="https://github.com/cobiwave/simplefolio"
             data-icon="octicon-star"
