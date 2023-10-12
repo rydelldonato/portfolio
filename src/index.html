@@ -199,7 +199,7 @@
           <div class="row">
             <div class="col-lg-4 col-sm-12">
               <div id="project2" class="project-wrapper__text load-hidden">
-                <h3 class="project-wrapper__text-title">Project Title 1</h3>
+                <h3 class="project-wrapper__text-title">Peachy's Food To Go</h3>
                 <div>
                   <p class="mb-4">
                     Demonstrate in this description the skills of a programmer:
@@ -238,11 +238,30 @@
                     data-tilt-max-glare="0.5"
                     class="thumbnail rounded js-tilt"
                   >
-                    <img
-                      alt="Project Image"
-                      class="img-fluid"
-                      src="assets/project.jpg"
-                    />
+                    <video muted id="project2-video" width="472" height="976" autoplay="true">
+                      <source src="./assets/pftg-tiktok.mp4" type="video/mp4">
+                    </video>
+                    <script>
+                      function handleVideoIntersection(entries, observer) {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      const video = entry.target;
+      video.play();
+      observer.unobserve(video); // Stop observing once the video is in view
+    }
+  });
+}
+const videoElement = document.getElementById("project2-video");
+
+if (videoElement) {
+  const videoObserver = new IntersectionObserver(handleVideoIntersection, {
+    threshold: 0.2, // Adjust this threshold as needed
+  });
+
+  videoObserver.observe(videoElement);
+}
+
+                    </script>
                   </div>
                 </a>
               </div>
