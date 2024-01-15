@@ -47,7 +47,7 @@
           <br />
           Your Sacramento-Based Tech Wizard🧙🏽‍♂️
           <br />
-          I'm a Full Stack Software Engineer dedicated to powering local
+          I'm a Web Developer dedicated to powering local
           businesses with digital success. Let's Elevate Your Business's Online
           Presence.🚀
         </h1>
@@ -89,7 +89,7 @@
               rel="noreferrer"
               target="_blank"
               class="cta-btn cta-btn--hero"
-              href="assets/11-29-23-rydell-donato-resume.pdf"
+              href="assets/12-3-23-rydell-donato-resume.docx"
             >
               View Resume
             </a>
@@ -268,6 +268,58 @@
           <div class="row">
             <div class="col-lg-4 col-sm-12">
               <div id="project3" class="project-wrapper__text load-hidden">
+                <h3 class="project-wrapper__text-title">Internal Threads</h3>
+                <div>
+                  <p class="mb-4">
+                    Internal Threads is a Filipina-owned small business located in Stockton, CA that specializes in affordable embroidered tote bags and apparel.
+                  </p>
+                </div>
+                <div style="display: flex; flex-direction: column; margin-top: 80px;" class="col-md-6"><h3>More Projects!</h3><a href="#project4"><img width="60" src="assets/down-arrow.png"/></a></div>              </div>
+            </div>
+            <div class="col-lg-8 col-sm-12">
+              <div class="project-wrapper__image load-hidden">
+                <a rel="noreferrer" target="_blank">
+                  <div
+                    data-tilt
+                    data-tilt-max="4"
+                    data-tilt-glare="true"
+                    data-tilt-max-glare="0.5"
+                    class="thumbnail rounded js-tilt"
+                  >
+                    <video loop="true" muted id="project3-video" width="100%" height="976" autoplay="false" controls>
+                      <source src="./assets/pftg-tiktok.mp4" type="video/mp4">
+                    </video>
+                    <script>
+                      function handleVideoIntersection(entries, observer) {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      const video = entry.target;
+      video.play();
+      observer.unobserve(video); // Stop observing once the video is in view
+    }
+  });
+}
+const videoElement = document.getElementById("project3-video");
+
+if (videoElement) {
+  const videoObserver = new IntersectionObserver(handleVideoIntersection, {
+    threshold: 0.2, // Adjust this threshold as needed
+  });
+
+  videoObserver.observe(videoElement);
+}
+
+                    </script>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- /END Project -->
+          <!-- Notice: each .row is a project -->
+          <div class="row">
+            <div class="col-lg-4 col-sm-12">
+              <div id="project4" class="project-wrapper__text load-hidden">
                 <h3 class="project-wrapper__text-title">Peachy's Food To Go Mobile</h3>
                 <div>
                   <p class="mb-4">
@@ -282,7 +334,7 @@
                 >
                   Source Code
                 </a>
-                <div style="display: flex; flex-direction: column; margin-top: 80px;" class="col-md-6"><h3>More Projects!</h3><a href="#project4"><img width="60" src="assets/down-arrow.png"/></a></div>              </div>
+                <div style="display: flex; flex-direction: column; margin-top: 80px;" class="col-md-6"><h3>More Projects!</h3><a href="#project5"><img width="60" src="assets/down-arrow.png"/></a></div>              </div>
             </div>
             <div class="col-lg-8 col-sm-12">
               <div class="project-wrapper__image load-hidden">
@@ -294,7 +346,7 @@
                     data-tilt-max-glare="0.5"
                     class="thumbnail rounded js-tilt"
                   >
-                    <video loop="true" muted id="project2-video" width="100%" height="976" autoplay="false" controls>
+                    <video loop="true" muted id="project4-video" width="100%" height="976" autoplay="false" controls>
                       <source src="./assets/pftg-tiktok.mp4" type="video/mp4">
                     </video>
                     <script>
@@ -307,7 +359,7 @@
     }
   });
 }
-const videoElement = document.getElementById("project2-video");
+const videoElement = document.getElementById("project4-video");
 
 if (videoElement) {
   const videoObserver = new IntersectionObserver(handleVideoIntersection, {
@@ -328,7 +380,7 @@ if (videoElement) {
           <!-- Notice: each .row is a project -->
           <div class="row">
             <div class="col-lg-4 col-sm-12">
-              <div id="project4" class="project-wrapper__text load-hidden">
+              <div id="project5" class="project-wrapper__text load-hidden">
                 <h3 class="project-wrapper__text-title">Peachy's Food To Go Web</h3>
                 <div>
                   <p class="mb-4">
@@ -351,7 +403,7 @@ if (videoElement) {
                 >
                   Source Code
                 </a>
-                <div style="display: flex; flex-direction: column; margin-top: 80px;" class="col-md-6"><h3>More Projects!</h3><a href="#project4"><img width="60" src="assets/down-arrow.png"/></a></div>
+                <div style="display: flex; flex-direction: column; margin-top: 80px;" class="col-md-6"><h3>More Projects!</h3><a href="#project6"><img width="60" src="assets/down-arrow.png"/></a></div>
               </div>
             </div>
             <div class="col-lg-8 col-sm-12">
